@@ -44,38 +44,6 @@
     </div>
     
     <div class="space"></div>
-
-    <script>
-        function createStar() {
-        const star = document.createElement('div');
-        star.classList.add('star');
-        star.style.top = `${Math.random() * window.innerHeight}px`;
-        star.style.left = `${Math.random() * window.innerWidth}px`;
-        document.body.appendChild(star);
-        }
-
-        for (let i = 0; i < 150; i++) {
-        createStar();
-        }
-
-        document.querySelectorAll('.info img').forEach(img => {
-        img.addEventListener('click', () => {
-            const targetSectionId = img.getAttribute('data-section');
-            
-            document.querySelectorAll('.paragraph-section').forEach(section => {
-                section.classList.remove('highlight');
-            });
-
-            const targetSection = document.getElementById(targetSectionId);
-            if (targetSection) {
-                targetSection.classList.add('highlight');
-
-                if (targetSectionId !== 'highlow') {
-                    targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            }
-        });
-        });
-    </script>
+    <script src="info.js"></script>
 </body>
 </html>

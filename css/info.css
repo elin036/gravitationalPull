@@ -15,7 +15,7 @@ html {
 
 body {
   font-family: sans-serif;
-  background: radial-gradient(circle, #6f748c 10%, #353949 70%, #000000 100%);
+  background: linear-gradient(to right, #000000 0%, #353949 20%, #6f748c 50%, #353949 80%, #000000 100%);
 }
 
 .star {
@@ -86,6 +86,7 @@ body {
 
 .paragraph-section.highlight {
   background-color: white;
+  transform: scale(1.05);
 }
 
 .arrow {
