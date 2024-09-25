@@ -271,7 +271,7 @@ body {
 
   #sun-wave {
     width: 200px;
-    height: 250px;
+    height: 235px;
   }
 
   #ring{
@@ -350,7 +350,7 @@ body {
     }
   
     #sun.slide-in {
-      top: -60%;
+      top: -70%;
     }
   }
 }
