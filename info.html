@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/info.css">
+    <title>Gravitational Pull</title>
+</head>
+<body>
+    <div class="space"></div>
+    <a href="index.html">
+        <div class="arrow direction">
+            <div></div>
+        </div>
+    </a>    
+
+    <div class="info-grid">
+        <div class="info images">
+            <img src="images/highlow.jpg" data-section="highlow" alt="High and Low Tides">
+            <img src="images/spring.jpg" data-section="spring" alt="Spring Tides">
+            <img src="images/neap.jpg" data-section="neap" alt="Neap Tides">
+        </div>
+
+        <br>
+
+        <div class="info col paragraph-section" id="highlow">
+            <h2>High and Low Tides</h2>
+            <p>
+                The gravitational pull of the Moon causes the Earth’s oceans to bulge, creating high tides on the side closest to the Moon and on the opposite side due to the Earth’s inertia. As a result, two high tides occur each day, roughly 12 hours apart. In between these bulges, where the ocean is pulled away from the shoreline, low tides form. The regular rise and fall of sea levels due to these high and low tides are a natural occurrence that affects coastal environments, marine life, and human activities.
+            </p>
+        </div>
+        <div class="info col paragraph-section" id="spring">
+            <h2>Spring Tides</h2>
+            <p>
+                Spring tides occur during the new moon and full moon phases when the Sun, Moon, and Earth align in a straight line. During this alignment, the gravitational forces of the Sun and Moon combine to create a stronger pull on the Earth’s oceans. This results in higher high tides and lower low tides, making the tidal range more extreme. Despite the name, spring tides have nothing to do with the season but instead refer to the "springing forth" of tides during these lunar phases.
+            </p>
+        </div>
+        <div class="info col paragraph-section" id="neap">
+            <h2>Neap Tides</h2>
+            <p>
+                Neap tides happen during the first and third quarters of the Moon when the Sun and Moon are at right angles to each other relative to Earth. In this position, the gravitational forces of the Sun and Moon partially cancel each other out, leading to a less pronounced effect on the oceans. As a result, high tides are lower and low tides are higher, producing a smaller tidal range. Neap tides are the least extreme tides and occur twice a month, offering a contrast to the more intense spring tides.
+            </p>
+        </div>
+    </div>
+    
+    <div class="space"></div>
+
+    <script>
+        function createStar() {
+        const star = document.createElement('div');
+        star.classList.add('star');
+        star.style.top = `${Math.random() * window.innerHeight}px`;
+        star.style.left = `${Math.random() * window.innerWidth}px`;
+        document.body.appendChild(star);
+        }
+
+        for (let i = 0; i < 150; i++) {
+        createStar();
+        }
+
+        document.querySelectorAll('.info img').forEach(img => {
+        img.addEventListener('click', () => {
+            const targetSectionId = img.getAttribute('data-section');
+            
+            document.querySelectorAll('.paragraph-section').forEach(section => {
+                section.classList.remove('highlight');
+            });
+
+            const targetSection = document.getElementById(targetSectionId);
+            if (targetSection) {
+                targetSection.classList.add('highlight');
+
+                if (targetSectionId !== 'highlow') {
+                    targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
+        });
+        });
+    </script>
+</body>
+</html>

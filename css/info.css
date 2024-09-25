@@ -1,0 +1,141 @@
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: 'moonhouse';
+  src: url('/images/moonhouse.ttf') format('truetype'),
+  url('/images/moonhouse.woff') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: sans-serif;
+  background: radial-gradient(circle, #6f748c 10%, #353949 70%, #000000 100%);
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background-color: white;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.space {
+  height: 80px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 70%;
+  background: rgba(255, 255, 255, 0.5);
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.info {
+  margin-top: 1%;
+  padding: 1%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+}
+
+.info.col{
+  margin-top: 1%;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+.info img {
+  width: 30%;
+  padding: 1%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.info p {
+  width: 80%;
+  font-size: 20px;
+}
+
+.info h2 {
+  font-size: 22px;   
+  text-align: left;   
+  width: 80%;  
+  margin: 0;   
+  padding-top: 15px;      
+}
+
+.paragraph-section {
+  display: block;
+  padding: 10px;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.paragraph-section.highlight {
+  background-color: white;
+}
+
+.arrow {
+  background: white;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  margin: 15px;
+  position: absolute;
+  top: 2%;
+  left: 2%; 
+  transition: 0.4s ease;
+}
+
+.arrow:hover {
+  box-shadow: 0px 0px 5px 5px rgb(134, 140, 151);
+  cursor: pointer;
+}
+
+.arrow div {
+  height: 20px;
+  width: 20px;
+  border-top: 8px solid black;
+  border-left: 8px solid black;
+  border-radius: 5px;
+  transform: rotate(45deg);
+  position: absolute;
+  left: 25px;
+  top: 27.5px;
+}
+
+.direction {
+  transform: rotate(270deg);
+}
+
+@media (max-width: 800px) {
+  .info img {
+    width: 80%;
+    height: auto;
+  }
+
+  .images {
+    padding: 5%;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none
+  }
+  .direction {
+    transform: rotate(360deg);
+  }
+}

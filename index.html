@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css\style.css">
   <title>Gravitational Pull</title>
-  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <img src="..\images\earth.png" id="earth-image" class="hover-item" data-name="Earth">
+  <img src="images\earth.png" id="earth-image" class="hover-item" data-name="Earth">
   <button id="start-btn">Start</button>
   
 
   <section id="hidden">
     <div id="ring"></div>
-    <img src="..\images\moon.png" id="moon" class="hover-item" data-name="Moon">
+    <img src="images\moon.png" id="moon" class="hover-item" data-name="Moon">
     
     <div id="earth"></div>
     <div id="wave" class="hover-item" data-name="Moon Wave"></div>
@@ -23,12 +23,6 @@
     <button id="sun-btn">
       <div class="arrow direction"><div></div></div>
     </button>
-    
-    <!--
-    <button id="drop-btn">
-      <div class="drop-ring"></div>
-    </button>
-    -->
 
     <div class="text-box">
       <p class="narration-text">
@@ -36,10 +30,15 @@
       </p>
     </div>
 
+    <a href="info.html">
+        <div class="info direction">
+            <div></div>
+        </div>
+    </a>  
   </section>
 
   <section id="hidden-sun">
-    <img src="..\images\sun.png" id="sun" class="hover-item" data-name="Sun">
+    <img src="images\sun.png" id="sun" class="hover-item" data-name="Sun">
     <div class="text-box">
       <p class="narration-text">
         The sun’s gravitational pull, while significant, is weaker on the moon compared to Earth's gravity. This reduced influence means that the sun affects the moon's orbit less directly, but it plays a crucial role in shaping tidal patterns on Earth. During spring tides, the sun and moon align, enhancing tidal ranges, while during neap tides, their perpendicular alignment results in smaller tidal fluctuations.
@@ -47,7 +46,8 @@
   </div>
   </section>
 
- <script src="script.js"></script>
+ <script src="script.js">
+ </script>
  
 </body>
 </html>
