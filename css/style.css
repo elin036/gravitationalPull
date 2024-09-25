@@ -246,7 +246,8 @@ body {
   z-index: 1000;
 }
 
-@media (max-width: 600px) {
+/*Small screen No ring*/
+@media (min-width: 300px) and (max-width: 600px) {
   #earth-image {
     width: 200px;
     height: 200px;
@@ -297,14 +298,14 @@ body {
     position: absolute;
     height: auto;
     width: 100%;
-    top: -70%;
+    top: -100%;
     cursor: pointer;
     z-index: 2;
     transition: top 1s ease;
   }
 
   #sun.slide-in {
-    top: -60%;
+    top: -45%;
   }
   
   #sun.slide-out {
@@ -334,88 +335,27 @@ body {
     top: 70;
   }
 
-}
-
-@media (min-width: 350px) and (max-width: 600px) {
-  #earth-image {
-    width: 200px;
-    height: 200px;
-  }
-
-  @keyframes shrink {
-    0% {
-      width: 300px;
-      height: 300px;
+  @media (min-width: 350px){
+    #sun {
+      top: -100%;
     }
-    100% {
-      width: 200px;
-      height: 200px;
+  
+    #sun.slide-in {
+      top: -40%;
     }
   }
-
-  #wave {
-    width: 250px;
-    height: 200px;
-  }
-
-  #moon {
-    top:10%;
-    left:10%;
-  }
-
-  #ring {
-    width: 450px;
-    height: 450px;
-  }
-
-  #start-btn {
-    padding: 5px 50px;
-    font-size: 40px;
-    letter-spacing: 5px;
-  }
-
-  .text-box {
-    font-size: 16px;
-    padding: 5px 15px;
-    width: 80%;
-  }
-
-  .arrow {
-    top: 10%;
-    left: 80%;
-  }
-
-  .direction {
-    transform: rotate(180deg);
-  }
-  #sun {
-    position: absolute;
-    height: auto;
-    width: 100%;
-    top: -100%;
-    cursor: pointer;
-    z-index: 2;
-    transition: top 1s ease;
-  }
-
-  #sun.slide-in {
-    top: -75%;
-  }
+  @media (min-width: 400px){
+    #sun {
+      top: -100%;
+    }
   
-  #sun.slide-out {
-    opacity: 0;
-  }
-  
-  #sun-wave {
-    width: 200px;
-    height: 325px; 
-  }
-
-  .text-box {
-    top: 68%;
+    #sun.slide-in {
+      top: -60%;
+    }
   }
 }
 
+/*Medium screen Yes ring*/
 @media (min-width: 600px) and (max-width: 1000px) {
   #earth-image {
     width: 200px;
@@ -472,14 +412,14 @@ body {
     position: absolute;
     height: auto;
     width: 100%;
-    top: -100%;
+    top: -80%;
     cursor: pointer;
     z-index: 2;
     transition: top 1s ease;
   }
 
   #sun.slide-in {
-    top: -100%;
+    top: -63%;
   }
   
   #sun.slide-out {
@@ -492,30 +432,86 @@ body {
   }
 
   .text-box {
-    top: 73%;
+    top: 68%;
   }
+  
+  @media (min-width: 400px) and (max-width: 700px) {
+    #sun {
+      top: -90%;
+    }
+  
+    #sun.slide-in {
+      top: -90%;
+    }
+  
+    #sun.slide-out {
+      opacity: 0;
+    }
+    
+    .text-box {
+      top: 73%;
+    }
+  }
+  
+  @media (min-width: 700px) and (max-width: 800px) {
+    #sun {
+      top: -100%;
+    }
+  
+    #sun.slide-in {
+      top: -100%;
+    }
+  
+    #sun.slide-out {
+      opacity: 0;
+    }
+    
+    .text-box {
+      top: 73%;
+    }
+  }
+
+  @media (min-width: 800px) {
+    #sun {
+      top: -120%;
+    }
+  
+    #sun.slide-in {
+      top: -120%;
+    }
+  
+    #sun.slide-out {
+      opacity: 0;
+    }
+    
+    .text-box {
+      top: 73%;
+    }
+  }
+  
 }
 
-@media (min-width: 1000px) and (max-width: 1200px) {
+/*Large screen*/
+@media (min-width: 1000px) {
   #sun {
     transform: translateX(10%);
   }
   #sun.slide-in {
-    left: -50%;
+    left: -57%;
   }
   #sun.slide-out {
-    left: -70%;
+    left: -80%;
   }
-}
 
-@media (min-width: 1200px) {
-  #sun {
-    transform: translateX(10%);
-  }
-  #sun.slide-in {
-    left: -40%;
-  }
-  #sun.slide-out {
-    left: -70%;
+  @media (min-width: 1200px) {
+    #sun {
+      transform: translateX(10%);
+    }
+    #sun.slide-in {
+      left: -40%;
+    }
+    #sun.slide-out {
+      left: -70%;
+    }
   }
 }
