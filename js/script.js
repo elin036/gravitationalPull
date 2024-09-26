@@ -147,10 +147,12 @@ document.getElementById('sun').addEventListener('click', function() {
 });
 
 
+// Click to start interactive moon
 document.getElementById('start-btn').addEventListener('click', function(event) {
-  this.style.display = 'none'; // Hide the ring
+  // Hide the ring
+  this.style.display = 'none';
 
-  // Check screen width and set hasRing accordingly
+  // Check screen width and set hasRing
   if (window.innerWidth <= 600) {
     hasRing = false;
   }
@@ -229,7 +231,6 @@ function moveMoon(mouseX, mouseY) {
 }
 
 // Has ring
-// Function created with the assistance of ChatGPT
 function positionMoonOnRing(angle) {
 
   const ringPos = ring.getBoundingClientRect();
@@ -248,7 +249,6 @@ function positionMoonOnRing(angle) {
   
 }
 
-// Function created with the assistance of ChatGPT
 function adjustWave(earthCenterX, earthCenterY, moonX, moonY) {
   // Get the screen width to determine responsiveness
   const screenWidth = window.innerWidth;
