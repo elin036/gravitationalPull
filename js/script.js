@@ -229,6 +229,7 @@ function moveMoon(mouseX, mouseY) {
 }
 
 // Has ring
+// Function created with the assistance of ChatGPT
 function positionMoonOnRing(angle) {
 
   const ringPos = ring.getBoundingClientRect();
@@ -247,6 +248,7 @@ function positionMoonOnRing(angle) {
   
 }
 
+// Function created with the assistance of ChatGPT
 function adjustWave(earthCenterX, earthCenterY, moonX, moonY) {
   // Get the screen width to determine responsiveness
   const screenWidth = window.innerWidth;
@@ -280,12 +282,6 @@ function adjustWave(earthCenterX, earthCenterY, moonX, moonY) {
   const angleDeg = Math.atan2(distanceY, distanceX) * (180 / Math.PI);
   wave.style.transform = `translate(-50%, -50%) rotate(${angleDeg}deg)`;
 }
-
-/*
-
-
-*/
-
 
 
 
