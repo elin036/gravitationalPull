@@ -7,8 +7,8 @@ html {
 
 @font-face {
   font-family: 'moonhouse';
-  src: url('../images/moonhouse.ttf') format('truetype'),
-  url('../images/moonhouse.woff') format('truetype');
+  src: url('../assets/moonhouse.ttf') format('truetype'),
+  url('../assets/moonhouse.woff') format('truetype');
   font-weight: normal;
   font-style: normal;
 }

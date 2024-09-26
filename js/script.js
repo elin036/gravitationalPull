@@ -152,7 +152,7 @@ document.getElementById('start-btn').addEventListener('click', function(event) {
 
   // Check screen width and set hasRing accordingly
   if (window.innerWidth <= 600) {
-    hasRing = false; // Set hasRing to false for mobile screens
+    hasRing = false;
   }
 
   // In case the moon is clicked
