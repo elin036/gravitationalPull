@@ -34,4 +34,4 @@
 
 ## **Future Enhancements (Optional)**
 
-- I would like to add a button for the larger screens to drop the ring so users can move the moon freely. I would also like to move the info page onto the interactive page so users won't have to go back and forth and they can just toggle
+- For future enchancements I would like to add a button for the larger screens to drop the ring so users can move the moon freely. I would also move the info page onto the interactive page so users won't have to go back and forth and they can just toggle it.
